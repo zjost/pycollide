@@ -1,6 +1,10 @@
 README
 ======
 This project is meant to provide easy 2D collision detection and handling for circles.  
+##### Required packages:
+1. Numpy
+2. Pygame
+
 #### MyCircle Class:
 This class holds a 2D numpy array for position, radius, color, 2D numpy array for velocity, and width.  The "mass" property is calculated and assumed to be proportional to the area of the circle (i.e. constant density).
 ##### Methods:
@@ -23,3 +27,6 @@ Holds a variety of useful functions related to collisions
   * Input objects of MyCircle class.  This function updates velocities of circles based on an elastic collision between two circles.  It accomplishes this by projecting velocities in the collision direction, updating them with elastic collision physics, and then converting back to original velocity vector positions.
 4. overlap_move(circle1, circle2, screen_width, screen_height).  
   * Input objects of MyCircle class and screen dimensions.  This moves circles that are overlapping in the direction of their post-collision velocities until they no longer overlap.  The function incrementally updates the positions until there is no longer overlap.
+
+## Example:
+See file "example_pycollide.py" for a script that utilizes the package.
